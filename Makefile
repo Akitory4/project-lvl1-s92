@@ -8,6 +8,6 @@ publish:
 	npm publish
 
 lint:
-	npm run eslint -- src test
+	npm run eslint src/**
 
 .PHONY: install start publish lint

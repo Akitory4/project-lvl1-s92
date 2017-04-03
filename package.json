@@ -2,7 +2,7 @@
   "name": "brain-games-aki4",
   "version": "0.0.7",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "dependencies": {
     "readline-sync": "*"
   },
@@ -10,8 +10,7 @@
     "babel-node": "babel-node",
     "eslint": "eslint",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublish": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -34,13 +33,12 @@
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
-    "babel-eslint": "*",
     "babel-plugin-transform-runtime": "*",
     "babel-preset-env": "*",
-    "babel-preset-flow": "*",
     "babel-preset-stage-0": "*",
     "debug": "*",
     "eslint": "*",
+    "babel-eslint": "*",
     "eslint-config-airbnb-base": "*",
     "eslint-plugin-import": "*"
   }

@@ -36,14 +36,6 @@
     "babel-preset-env": "*",
     "babel-preset-flow": "*",
     "babel-preset-stage-0": "*",
-    "debug": "*",
-    "eslint": "^3.18.0",
-    "eslint-config-airbnb-base": "*",
-    "eslint-plugin-flowtype": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-jest": "^19.0.1",
-    "flow-bin": "^0.42",
-    "flow-typed": "*",
-    "jest": "^19"
+    "debug": "*"
   }
 }

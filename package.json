@@ -1,0 +1,44 @@
+{
+  "name": "brain_games",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akitory4/project-lvl1-s92.git"
+  },
+  "keywords": [
+    "brain",
+    "games",
+    "hexlet_projects"
+  ],
+  "author": "Aki4",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akitory4/project-lvl1-s92/issues"
+  },
+  "homepage": "https://github.com/Akitory4/project-lvl1-s92#readme",
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-preset-env": "*",
+    "babel-preset-flow": "*",
+    "babel-preset-stage-0": "*",
+    "debug": "*",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-flowtype": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "^19.0.1",
+    "flow-bin": "^0.42",
+    "flow-typed": "*",
+    "jest": "^19"
+  }
+}

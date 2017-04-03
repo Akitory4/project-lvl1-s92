@@ -1,10 +1,10 @@
 {
   "name": "brain-games-aki4",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "readline-sync":"*"
+    "readline-sync": "*"
   },
   "scripts": {
     "babel-node": "babel-node",
@@ -38,6 +38,9 @@
     "babel-preset-env": "*",
     "babel-preset-flow": "*",
     "babel-preset-stage-0": "*",
-    "debug": "*"
+    "debug": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*"
   }
 }

@@ -1,5 +1,6 @@
 env:
   node: true
+  es6: true
 
 parser: babel-eslint
 
@@ -9,6 +10,9 @@ parserOptions:
 
 extends:
   - 'airbnb-base'
+
+plugins:
+  - import
 
 rules:
   no-useless-escape: 0

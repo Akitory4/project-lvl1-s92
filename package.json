@@ -41,6 +41,8 @@
     "eslint": "*",
     "babel-eslint": "*",
     "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*"
+    "eslint-plugin-import": "*",
+    "flow-bin": "^0.42",
+    "flow-typed": "*"
   }
 }

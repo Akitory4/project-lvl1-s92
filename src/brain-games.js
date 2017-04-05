@@ -1,21 +1,20 @@
-import readlineSync from 'readline-sync';
+import { read, show } from './utils/io';
 import { getRules, next } from './games/game';
 
-const COUNT_QUESTIONS = 3;
-
 export const newGame = () => {
+  const COUNT_QUESTIONS = 3;
   const welcomeText = 'Welcome to the Brain Games!';
-  console.log(`${welcomeText}`);
-  console.log(getRules());
-  const userName = readlineSync.question('May I have your name?');
-  console.log(`Hello, ${userName}!`);
+  show(`${welcomeText}`);
+  show(getRules());
+  const userName = read('May I have your name?');
+  show(`Hello, ${userName}!`);
   for (let i = 0; i < COUNT_QUESTIONS; i += 1) {
     if (!next()) {
-      console.log(`Let's try again, ${userName}!`);
+      show(`Let's try again, ${userName}!`);
       return;
     }
   }
-  console.log(`Congratulations, ${userName}!`);
+  show(`Congratulations, ${userName}!`);
 };
 
 export default newGame;

@@ -4,7 +4,7 @@ import { newGame } from '../brain-games';
 
 const random = (min, max) => Math.round((min - 0.5) + (Math.random() * ((max - min) + 1)));
 
-const getRight = (a, b, op) => {
+const getCorrect = (a, b, op) => {
   console.log(`operator: ${op}`);
   switch (op) {
     case '-':
@@ -36,7 +36,7 @@ const handler = () => {
   const a = random(0, 100);
   const b = random(0, 100);
   const operator = getOperator();
-  const isCorrect = getRight(a, b, operator);
+  const isCorrect = getCorrect(a, b, operator);
   const answer = readlineSync.question(`Question: ${a} ${operator} ${b} `);
   console.log(`Your answer: ${answer}`);
   if (answer === String(isCorrect)) {

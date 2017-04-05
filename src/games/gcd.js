@@ -1,8 +1,7 @@
-import readlineSync from 'readline-sync';
 import { game } from './game';
 import { newGame } from '../brain-games';
-
-const random = (min, max) => Math.round((min - 0.5) + (Math.random() * ((max - min) + 1)));
+import { read, show } from '../utils/io';
+import random from '../utils/random';
 
 const gcd = (a, b) => {
   if (!b) {
@@ -15,12 +14,12 @@ const handler = () => {
   const a = random(0, 100);
   const b = random(0, 100);
   const isCorrect = gcd(a, b);
-  const answer = readlineSync.question(`Question: ${a} ${b} `);
-  console.log(`Your answer: ${answer}`);
+  const answer = read(`Question: ${a} ${b} `);
+  show(`Your answer: ${answer}`);
   if (answer === String(isCorrect)) {
-    console.log('Correct!');
+    show('Correct!');
   } else {
-    console.log(`'${String(answer)}' is wrong answer ;(. Correct answer was '${isCorrect}'.`);
+    show(`'${String(answer)}' is wrong answer ;(. Correct answer was '${isCorrect}'.`);
     return false;
   }
   return true;

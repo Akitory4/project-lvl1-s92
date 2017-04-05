@@ -7,4 +7,4 @@ export const game = (r, h) => {
 
 export const getRules = () => rules;
 
-export const start = () => handler();
+export const next = () => handler();

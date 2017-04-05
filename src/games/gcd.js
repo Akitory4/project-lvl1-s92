@@ -4,11 +4,18 @@ import { newGame } from '../brain-games';
 
 const random = (min, max) => Math.round((min - 0.5) + (Math.random() * ((max - min) + 1)));
 
+const gcd = (a, b) => {
+  if (!b) {
+    return a;
+  }
+  return gcd(b, a % b);
+};
+
 const handler = () => {
   const a = random(0, 100);
   const b = random(0, 100);
-  const isCorrect = getRight(a, b, operator);
-  const answer = readlineSync.question(`Question: ${a} ${operator} ${b} `);
+  const isCorrect = gcd(a, b);
+  const answer = readlineSync.question(`Question: ${a} ${b} `);
   console.log(`Your answer: ${answer}`);
   if (answer === String(isCorrect)) {
     console.log('Correct!');

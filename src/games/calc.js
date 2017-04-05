@@ -1,6 +1,4 @@
-import { game } from './game';
 import { newGame } from '../brain-games';
-import { read, show } from '../utils/io';
 import random from '../utils/random';
 
 const getCorrect = (a, b, op) => {
@@ -30,25 +28,18 @@ const getOperator = () => {
   }
 };
 
-const handler = () => {
+const game = () => {
   const a = random(0, 100);
   const b = random(0, 100);
   const operator = getOperator();
-  const isCorrect = getCorrect(a, b, operator);
-  const answer = read(`Question: ${a} ${operator} ${b} `);
-  show(`Your answer: ${answer}`);
-  if (answer === String(isCorrect)) {
-    show('Correct!');
-  } else {
-    show(`'${String(answer)}' is wrong answer ;(. Correct answer was '${isCorrect}'.`);
-    return false;
-  }
-  return true;
+  const question = `Question: ${a} ${operator} ${b} `;
+  const correct = getCorrect(a, b, operator);
+  return { question, correct };
 };
 
 const run = () => {
   const rules = 'What is the result of the expression?\n';
-  newGame(game(rules, handler));
+  newGame(rules, game);
 };
 
 export default run;

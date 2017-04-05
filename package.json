@@ -1,6 +1,6 @@
 {
   "name": "brain-games-aki4",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "",
   "main": "dist/index.js",
   "dependencies": {
@@ -41,6 +41,8 @@
     "eslint": "*",
     "babel-eslint": "*",
     "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*"
+    "eslint-plugin-import": "*",
+    "flow-bin": "^0.42",
+    "flow-typed": "*"
   }
 }

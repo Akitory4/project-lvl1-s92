@@ -10,8 +10,8 @@ const gcd = (numberA, numberB) => {
 };
 
 const game = () => {
-  const numberA = random(0, 100);
-  const numberB = random(0, 100);
+  const numberA = random(1, 100);
+  const numberB = random(1, 100);
   const question = `Question: ${numberA} ${numberB} `;
   const correct = `${gcd(numberA, numberB)}`;
   return { question, correct };

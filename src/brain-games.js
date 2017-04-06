@@ -9,11 +9,12 @@ export const newGame = (rules, game) => {
   console.log(`Hello, ${userName}!`);
   for (let i = 0; i < COUNT_QUESTIONS; i += 1) {
     const gameData = game();
-    const answer = readlineSync.question(gameData.question);
-    if (answer === String(gameData.correct)) {
+    let answer = '';
+    answer = readlineSync.question(gameData.question);
+    if (answer === gameData.correct) {
       console.log('Correct!');
     } else {
-      console.log(`'${String(answer)}' is wrong answer ;(. Correct answer was '${gameData.correct}'.`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${gameData.correct}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }

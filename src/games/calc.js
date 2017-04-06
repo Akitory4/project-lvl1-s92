@@ -1,45 +1,41 @@
-import { newGame } from '../brain-games';
+import brainGame from '../brain-games';
 import random from '../utils/random';
 
-const getCorrect = (a, b, op) => {
-  switch (op) {
-    case '-':
-      return a - b;
-    case '+':
-      return a + b;
-    case '*':
-      return a * b;
-    default:
-      return NaN;
-  }
-};
-
-const getOperator = () => {
+const getGameData = (a, b) => {
+  let result;
+  let operator;
   const n = Math.floor(Math.random() * 3);
   switch (n) {
     case 0:
-      return '-';
+      result = (a - b);
+      operator = '-';
+      break;
     case 1:
-      return '+';
+      result = (a + b);
+      operator = '+';
+      break;
     case 2:
-      return '*';
+      result = (a * b);
+      operator = '*';
+      break;
     default:
       return NaN;
   }
+  return { operator, result };
 };
 
 const game = () => {
   const a = random(0, 100);
   const b = random(0, 100);
-  const operator = getOperator();
-  const question = `Question: ${a} ${operator} ${b} `;
-  const correct = getCorrect(a, b, operator);
+  const data = getGameData(a, b);
+  const question = `Question: ${a} ${data.operator} ${b} `;
+  const correct = `${data.result}`;
   return { question, correct };
 };
 
 const run = () => {
   const rules = 'What is the result of the expression?\n';
-  newGame(rules, game);
+  brainGame(rules, game);
 };
 
 export default run;

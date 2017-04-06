@@ -1,4 +1,4 @@
-import { newGame } from '../brain-games';
+import brainGame from '../brain-games';
 import random from '../utils/random';
 
 const getCorrect = number => (number % 2 === 0 ? 'yes' : 'no');
@@ -12,7 +12,7 @@ const game = () => {
 
 const run = () => {
   const rules = 'Answer "yes" if number even otherwise answer "no".\n';
-  newGame(rules, game);
+  brainGame(rules, game);
 };
 
 export default run;

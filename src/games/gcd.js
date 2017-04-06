@@ -1,24 +1,22 @@
 import brainGame from '../brain-games';
-import random from '../utils/random';
 
-const gcd = (a, b) => {
-  if (!b) {
-    return a;
+const random = (min, max) => Math.round((min - 0.5) + (Math.random() * ((max - min) + 1)));
+
+const gcd = (numberA, numberB) => {
+  if (!numberB) {
+    return numberA;
   }
-  return gcd(b, a % b);
+  return gcd(numberB, numberA % numberB);
 };
 
 const game = () => {
-  const a = random(0, 100);
-  const b = random(0, 100);
-  const question = `Question: ${a} ${b} `;
-  const correct = `${gcd(a, b)}`;
+  const numberA = random(0, 100);
+  const numberB = random(0, 100);
+  const question = `Question: ${numberA} ${numberB} `;
+  const correct = `${gcd(numberA, numberB)}`;
   return { question, correct };
 };
 
-const run = () => {
-  const rules = 'Find the greatest common divisor of given numbers.\n';
-  brainGame(rules, game);
-};
+const run = () => brainGame('Find the greatest common divisor of given numbers.', game);
 
 export default run;

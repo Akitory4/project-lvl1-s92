@@ -1,5 +1,6 @@
 import brainGame from '../brain-games';
-import random from '../utils/random';
+
+const random = (min, max) => Math.round((min - 0.5) + (Math.random() * ((max - min) + 1)));
 
 const getCorrect = (number) => {
   const array = number.toString().split('').map(n => Number(n)).sort();
@@ -18,9 +19,6 @@ const game = () => {
   return { question, correct };
 };
 
-const run = () => {
-  const rules = 'Balance the given number.\n';
-  brainGame(rules, game);
-};
+const run = () => brainGame('Balance the given number.', game);
 
 export default run;

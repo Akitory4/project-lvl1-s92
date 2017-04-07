@@ -25,4 +25,4 @@ publish:
 lint:
 	npm run eslint src/** --fix
 
-.PHONY: install publish lint start-even start-calc start-gcd start-balance start-progression
+.PHONY: install publish lint start-even start-calc start-gcd start-balance start-progression start-prime

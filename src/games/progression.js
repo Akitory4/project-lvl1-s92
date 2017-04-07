@@ -25,7 +25,7 @@ const game = () => {
   const coefficientAP = getRandomNumber(0, lenArray);
   const progressionArray = getProgressionArray(lenArray, coefficientAP);
   const correct = `${progressionArray[hideIndex]}`;
-  console.log(`debug: ${correct}`);// ToDo: remove it
+  // console.log(`debug: ${correct}`);// ToDo: remove it
   progressionArray[hideIndex] = '...';
   const question = progressionArray.join(' ').toString();
   return { question, correct };

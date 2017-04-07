@@ -1,10 +1,6 @@
 import brainGame from '../brain-games';
 import { getRandomNumber } from '../utils';
 
-const TRUE_ANSWER = 'yes';
-
-const FALSE_ANSWER = 'no';
-
 const isPrime = (num) => {
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) return false;
@@ -12,7 +8,7 @@ const isPrime = (num) => {
   return num !== 1;
 };
 
-const getCorrectAnswer = num => (isPrime(num) ? TRUE_ANSWER : FALSE_ANSWER);
+const getCorrectAnswer = num => (isPrime(num) ? 'yes' : 'no');
 
 const game = () => {
   const num = getRandomNumber(0, 100);

@@ -1,6 +1,6 @@
 {
   "name": "brain-games-aki4",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "",
   "main": "dist/index.js",
   "dependencies": {
@@ -15,7 +15,8 @@
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-balance": "dist/bin/brain-balance.js"
+    "brain-balance": "dist/bin/brain-balance.js",
+    "brain-progression": "dist/bin/brain-progression.js"
   },
   "repository": {
     "type": "git",

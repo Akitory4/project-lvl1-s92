@@ -17,6 +17,9 @@ const game = () => {
   return { question, correct };
 };
 
-const run = () => brainGame('Find the greatest common divisor of given numbers.', game);
+const run = () => {
+  const description = 'Find the greatest common divisor of given numbers.';
+  brainGame(description, game);
+};
 
 export default run;

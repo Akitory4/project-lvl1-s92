@@ -25,12 +25,15 @@ const game = () => {
   const coefficientAP = getRandomNumber(0, lenArray);
   const progressionArray = getProgressionArray(lenArray, coefficientAP);
   const correct = `${progressionArray[hideIndex]}`;
-  // console.log(`debug: ${correct}`);// ToDo: remove it
+  console.log(`debug: ${correct}`);// ToDo: remove it
   progressionArray[hideIndex] = '...';
-  const question = progressionArray.toString();
+  const question = progressionArray.join(' ').toString();
   return { question, correct };
 };
 
-const run = () => brainGame('What number is missing in this progression?', game);
+const run = () => {
+  const description = 'What number is missing in this progression?';
+  brainGame(description, game);
+};
 
 export default run;

@@ -18,6 +18,9 @@ const game = () => {
   return { question, correct };
 };
 
-const run = () => brainGame('Balance the given number.', game);
+const run = () => {
+  const description = 'Balance the given number.';
+  brainGame(description, game);
+};
 
 export default run;

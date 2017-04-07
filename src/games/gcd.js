@@ -1,19 +1,19 @@
 import brainGame from '../brain-games';
+import getRandomNumber from '../utils';
 
-const random = (min, max) => Math.round((min - 0.5) + (Math.random() * ((max - min) + 1)));
 
-const gcd = (numberA, numberB) => {
-  if (!numberB) {
-    return numberA;
+const gcd = (num1, num2) => {
+  if (!num2) {
+    return num1;
   }
-  return gcd(numberB, numberA % numberB);
+  return gcd(num2, num1 % num2);
 };
 
 const game = () => {
-  const numberA = random(1, 100);
-  const numberB = random(1, 100);
-  const question = `Question: ${numberA} ${numberB} `;
-  const correct = `${gcd(numberA, numberB)}`;
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
+  const question = `Question: ${num1} ${num2} `;
+  const correct = `${gcd(num1, num2)}`;
   return { question, correct };
 };
 

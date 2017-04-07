@@ -1,22 +1,21 @@
 import brainGame from '../brain-games';
+import getRandomNumber from '../utils';
 
-const random = (min, max) => Math.round((min - 0.5) + (Math.random() * ((max - min) + 1)));
-
-const getGameData = (numberA, numberB) => {
+const getGameData = (num1, num2) => {
   let result;
   let operator;
   const n = Math.floor(Math.random() * 3);
   switch (n) {
     case 0:
-      result = (numberA - numberB);
+      result = (num1 - num2);
       operator = '-';
       break;
     case 1:
-      result = (numberA + numberB);
+      result = (num1 + num2);
       operator = '+';
       break;
     case 2:
-      result = (numberA * numberB);
+      result = (num1 * num2);
       operator = '*';
       break;
     default:
@@ -26,10 +25,10 @@ const getGameData = (numberA, numberB) => {
 };
 
 const game = () => {
-  const numberA = random(0, 100);
-  const numberB = random(0, 100);
-  const data = getGameData(numberA, numberB);
-  const question = `Question: ${numberA} ${data.operator} ${numberB} `;
+  const num1 = getRandomNumber(0, 100);
+  const num2 = getRandomNumber(0, 100);
+  const data = getGameData(num1, num2);
+  const question = `Question: ${num1} ${data.operator} ${num2} `;
   const correct = `${data.result}`;
   return { question, correct };
 };

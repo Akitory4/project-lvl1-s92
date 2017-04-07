@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const COUNT_QUESTIONS = 3;
 
-const gameplay = (userName, game) => {
+const gameplay = (game) => {
   for (let i = 0; i < COUNT_QUESTIONS; i += 1) {
     const gameData = game();
     const userAnswer = readlineSync.question(gameData.question);
@@ -22,7 +22,7 @@ export const newGame = (rules, game) => {
   console.log(rules);
   const userName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${userName}!`);
-  if (gameplay(userName, game)) {
+  if (gameplay(game)) {
     console.log(`Congratulations, ${userName}!`);
   } else {
     console.log(`Let's try again, ${userName}!`);

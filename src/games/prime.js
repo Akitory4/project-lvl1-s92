@@ -5,9 +5,14 @@ const TRUE_ANSWER = 'yes';
 
 const FALSE_ANSWER = 'no';
 
-const isCorrect = num => num % 2 === 0;
+const isPrime = (num) => {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) return false;
+  }
+  return num !== 1;
+};
 
-const getCorrectAnswer = num => (isCorrect(num) ? TRUE_ANSWER : FALSE_ANSWER);
+const getCorrectAnswer = num => (isPrime(num) ? TRUE_ANSWER : FALSE_ANSWER);
 
 const game = () => {
   const num = getRandomNumber(0, 100);
@@ -17,7 +22,7 @@ const game = () => {
 };
 
 const run = () => {
-  const description = 'Answer "yes" if number even otherwise answer "no".';
+  const description = 'Answer "yes" if number prime otherwise answer "no".';
   brainGame(description, game);
 };
 

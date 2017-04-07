@@ -33,6 +33,9 @@ const game = () => {
   return { question, correct };
 };
 
-const run = () => brainGame('What is the result of the expression?', game);
+const run = () => {
+  const description = 'What is the result of the expression?';
+  brainGame(description, game);
+};
 
 export default run;

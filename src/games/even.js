@@ -1,19 +1,18 @@
 import brainGame from '../brain-games';
-
-const random = (min, max) => Math.round((min - 0.5) + (Math.random() * ((max - min) + 1)));
+import getRandomNumber from '../utils';
 
 const TRUE_ANSWER = 'yes';
 
 const FALSE_ANSWER = 'no';
 
-const isCorrect = number => number % 2 === 0;
+const isCorrect = num => num % 2 === 0;
 
-const getCorrectAnswer = number => (isCorrect(number) ? TRUE_ANSWER : FALSE_ANSWER);
+const getCorrectAnswer = num => (isCorrect(num) ? TRUE_ANSWER : FALSE_ANSWER);
 
 const game = () => {
-  const number = random(0, 100);
-  const question = `Question: ${number} `;
-  const correct = getCorrectAnswer(number);
+  const num = getRandomNumber(0, 100);
+  const question = `Question: ${num} `;
+  const correct = getCorrectAnswer(num);
   return { question, correct };
 };
 

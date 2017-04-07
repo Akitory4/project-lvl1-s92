@@ -1,5 +1,5 @@
 import brainGame from '../brain-games';
-import getRandomNumber from '../utils';
+import { getRandomNumber } from '../utils';
 
 
 const gcd = (num1, num2) => {

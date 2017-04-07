@@ -1,5 +1,5 @@
 import brainGame from '../brain-games';
-import getRandomNumber from '../utils';
+import { getRandomNumber } from '../utils';
 
 const getCorrect = (num) => {
   const array = num.toString().split('').map(n => Number(n)).sort();

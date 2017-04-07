@@ -1,5 +1,5 @@
 import brainGame from '../brain-games';
-import getRandomNumber from '../utils';
+import { getRandomNumber } from '../utils';
 
 const TRUE_ANSWER = 'yes';
 
